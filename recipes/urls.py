@@ -1,9 +1,10 @@
 from django.urls import path
 
-from recipes.views import bomdia, home
+from . import views  # from recipes import views (. signfica a pasta que estou)
 
 urlpatterns = [
-    path('', home),
-    path('bomdia/', bomdia),
+    path('', views.home),
+    path('bomdia/', views.bomdia),
+    path('recipes/<int:id>/', views.recipe),
 
 ]
